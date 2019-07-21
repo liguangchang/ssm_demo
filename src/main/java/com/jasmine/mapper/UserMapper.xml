@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.jasmine.mapper.UserMapper">
+    <resultMap type="com.jasmine.pojo.User" id="userResultMap">
+        <id property="id" column="id" javaType="integer"></id>
+        <result property="name" column="name" javaType="string"/>
+        <result property="age" column="age" javaType="integer"/>
+        <result property="tel" column="tel" javaType="string"/>
+        <result property="address" column="address" javaType="string"/>
+    </resultMap>
+
+    <select id="getAllUser" resultType="com.jasmine.pojo.User">
+        select * from User
+    </select>
+
+</mapper>
+ 
